@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elso feladat</title>
+    
+</head>
+<body>
+    <input type="text"id="szoveg">
+    <input type="radio" name="formazas" id="nagy" value="Nagybetu">
+    <label for="nagy">Nagybetu</label>
+    <input type="radio" name="formazas" id="kis" value="Kisbetu">
+    <label for="kis">Kisbetu</label>
+    <button onclick="if (nagy.checked=true){nagybetu()} else if(kis.checked=true){kisbetu()} else{hibauzi()}">Formaz</button>
+
+    <script>
+        let szoveg = document.querySelector('#szoveg')
+        let nagy = document.querySelector('#nagy')
+        let kis = document.querySelector('#kis')
+        function nagybetu(){
+            szoveg.value = szoveg.value.toUpperCase();
+        }
+
+        function kisbetu (){
+            szoveg.value = szoveg.value.toLowerCase();
+        }
+
+        function hibauzi(){
+            alert("Hiba!")
+        }
+    </script>
+</body>
+</html>
